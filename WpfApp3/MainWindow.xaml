@@ -14,14 +14,17 @@
 
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="搜索条件："  VerticalAlignment="Center"/>
-            <TextBox Width="200" Height="25" Margin="10 0 0 0"/>
-            <Button Content="查找" Width="70" Height="25" Margin="10 0 0 0"/>
-            <Button Content="重置" Width="70" Height="25" Margin="10 0 0 0"/>
-            <Button Content="新增" Width="70" Height="25" Margin="10 0 0 0"/>
+            <TextBox Width="200" Height="25" Text="{Binding Search}" Margin="10 0 0 0"/>
+            <Button Content="查找" Width="70" Command="{Binding QueryCommand}" Height="25" Margin="10 0 0 0"/>
+            <Button Content="重置" Width="70" Command="{Binding ResetCommand}" Height="25"  Margin="10 0 0 0"/>
+            <Button Content="新增" Width="70" Command="{Binding AddCommand}" Height="25" Margin="10 0 0 0"/>
         </StackPanel>
 
-        <!--数据模板  ColumnWidth="*"  自适应宽度 AutoGenerateColumns="False"  自动生成列为false-->
-        <DataGrid Grid.Row="1" ColumnWidth="*" AutoGenerateColumns="False">
+        <!--数据模板  ColumnWidth="*"  自适应宽度 AutoGenerateColumns="False"  自动生成列为false
+        ItemsSource 绑定一下ViewModel中的GridModelList  CanUserAddRows(取消用户添加行)设为false 就可以进行增加 -->
+        <DataGrid Grid.Row="1" ColumnWidth="*" AutoGenerateColumns="False" 
+                  CanUserAddRows="False"
+                  ItemsSource="{Binding GridModelList}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="序号" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="姓名" Binding="{Binding Name}"/>
@@ -29,8 +32,14 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Button Content="修改" Width="60"  Height="25" Background="white" Foreground="black"/>
-                                <Button Content="删除" Width="60"  Height="25" Background="red" Foreground="white"/>
+                                <Button Content="修改" Width="60"  Height="25" Background="white" Foreground="black"
+                                        CommandParameter="{Binding Id}"
+                                        Command="{Binding DataContext.EditCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=DataGrid}}"
+                                        />
+                                <Button Content="删除" Width="60"  Height="25" Background="red" Foreground="white"
+                                        CommandParameter="{Binding Id}"
+                                        Command="{Binding DataContext.DelCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=DataGrid}}"
+                                        />
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

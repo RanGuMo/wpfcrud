@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp3.ViewModel;
 
 namespace WpfApp3
 {
@@ -23,6 +24,12 @@ namespace WpfApp3
         public MainWindow()
         {
             InitializeComponent();
+            //页面初始化时，绑定数据源
+            MainViewModel viewModel = new MainViewModel();
+            viewModel.Query();
+
+            this.DataContext = viewModel;
+
         }
     }
 }

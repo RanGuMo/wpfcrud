@@ -17,7 +17,7 @@ namespace WpfApp3.DB
             Init();
         }
 
-        private List<Student> Students;
+        public List<Student> Students;
         /// <summary>
         /// 定义初始化数据的方法
         /// </summary>
@@ -69,6 +69,29 @@ namespace WpfApp3.DB
         public List<Student> GetStudentByName(string name)
         {
             return Students.Where(q=>q.Name.Contains(name)).ToList();
+        }
+        /// <summary>
+        /// 根据Id 找到学生信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Student GetStudentById(int id)
+        {
+            var model = Students.FirstOrDefault(t => t.Id == id);
+            if (model != null)
+            {
+                return new Student()
+                {
+                    Id = model.Id,
+                    Name = model.Name
+                };
+            }
+
+            return null;
+
+
+            //直接返回id 会存在，点击取消，也会把数据存进去
+            //return Students.FirstOrDefault(t => t.Id == id);
         }
 
     }
