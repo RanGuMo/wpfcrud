@@ -126,11 +126,12 @@ namespace WpfApp3.ViewModel
             if (r.Value)
             {
                 student.Id= localDB.Students.Max(t => t.Id) + 1;
+                //这里拿到的是绑定的id，当点击查找后（例如，19 查找后）再点击添加会再19后面加一的
                 //student.Id = GridModelList.Max(t => t.Id)+1;
 
                 localDB.AddStudent(student);
+                //添加完成后，重置
                 Search = string.Empty;
-                
                 this.Query();
             }
         }
