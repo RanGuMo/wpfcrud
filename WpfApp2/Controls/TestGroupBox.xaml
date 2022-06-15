@@ -1,0 +1,134 @@
+﻿<Window x:Class="WpfApp2.Controls.TestGroupBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.Controls"
+        mc:Ignorable="d"
+        Title="WindowGroupBox" Height="450" Width="800">
+
+    <Window.Resources>
+        <ControlTemplate x:Key="myGroupBox" TargetType="GroupBox">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Background="Orange">
+                    <Label Foreground="Red" FontWeight="Bold" FontSize="18">
+                        我是个标题
+                    </Label>
+                </Border>
+
+                <Border Grid.Row="1" Background="AliceBlue">
+                    <StackPanel>
+                        <TabControl Name="myTabControl" 
+     TabStripPlacement="Top" 
+         Margin="0, 0, 0, 10" Height="350"
+     >
+                            <TabItem>
+                                <TabItem.Header>_Job Info</TabItem.Header>
+                                <StackPanel>
+                                    <TextBlock>Select a job</TextBlock>
+                                    <ListBox Name ="job" >
+                                        <ListBoxItem IsSelected="true">Programmer</ListBoxItem>
+                                        <ListBoxItem>Tester</ListBoxItem>
+                                        <ListBoxItem>Writer</ListBoxItem>
+                                        <ListBoxItem>Manager</ListBoxItem>
+                                    </ListBox>
+                                </StackPanel>
+                            </TabItem>
+                        </TabControl>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--
+            1.需要注意Header属性的使用
+            2.groupbox的内容可以自由组合
+            3.我们使用自定义模板==》我们是在Window.Resources里面使用ControlTemplate 需要指定key 需要指定作用模板
+            
+        -->
+        <GroupBox Template="{StaticResource myGroupBox}" Grid.Row="0">
+        </GroupBox>
+
+        <GroupBox Template="{StaticResource myGroupBox}" Grid.Row="1">
+        </GroupBox>
+
+        <!--<GroupBox Header="GroupBox"/>-->
+
+        <!--<GroupBox >
+            <GroupBox.Header>
+                <Label Foreground="blue">这个是groupbox的标题</Label>
+            </GroupBox.Header>
+            <StackPanel>
+                <TabControl Name="myTabControl" 
+     TabStripPlacement="Top" 
+         Margin="0, 0, 0, 10" Height="350"
+     >
+                    <TabItem Name="PersonalInfo">
+                        <TabItem.Header>_Personal Info</TabItem.Header>
+                        <StackPanel>
+                            <TextBlock>Employee</TextBlock>
+                            <TextBlock>Select your name</TextBlock>
+                            <ListBox Name="empName" >
+                                <ListBoxItem IsSelected="true">Esther</ListBoxItem>
+                                <ListBoxItem>George</ListBoxItem>
+                                <ListBoxItem>Alan</ListBoxItem>
+                                <ListBoxItem>Eric</ListBoxItem>
+                            </ListBox>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem>
+                        <TabItem.Header>_Job Info</TabItem.Header>
+                        <StackPanel>
+                            <TextBlock>Select a job</TextBlock>
+                            <ListBox Name ="job" >
+                                <ListBoxItem IsSelected="true">Programmer</ListBoxItem>
+                                <ListBoxItem>Tester</ListBoxItem>
+                                <ListBoxItem>Writer</ListBoxItem>
+                                <ListBoxItem>Manager</ListBoxItem>
+                            </ListBox>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Name="Skill">
+                        <TabItem.Header>_Skill</TabItem.Header>
+                        <StackPanel>
+                            <TextBlock>
+                Select your strongest skill
+                            </TextBlock>
+                            <ListBox Name="skills" >
+                                <ListBoxItem IsSelected="true">C#</ListBoxItem>
+                                <ListBoxItem>Visual Basic</ListBoxItem>
+                                <ListBoxItem>.NET</ListBoxItem>
+                                <ListBoxItem>JScript</ListBoxItem>
+                            </ListBox>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Name="Summary" >
+                        <TabItem.Header>Su_mmary</TabItem.Header>
+                        <StackPanel>
+                            <TextBlock Name="emp"/>
+                            <TextBlock Name="ejob"/>
+                            <TextBlock Name="eskill"/>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+                <Button Content="Show Summary" />
+            </StackPanel>
+        </GroupBox>-->
+
+    </Grid>
+</Window>
+

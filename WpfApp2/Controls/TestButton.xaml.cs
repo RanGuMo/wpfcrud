@@ -10,21 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp2.ViewModel;
 
-namespace WpfApp2
+namespace WpfApp2.Controls
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// TestButton.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TestButton : Window
     {
-        public MainWindow()
+        public TestButton()
         {
             InitializeComponent();
-            this.DataContext = new MainWindow();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("hhhhhh");
+        }
+
+        private void Button_MouseMove(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

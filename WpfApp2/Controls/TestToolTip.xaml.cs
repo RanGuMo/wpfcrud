@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp2.ViewModel;
 
-namespace WpfApp2
+namespace WpfApp2.Controls
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// TestToolTip.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TestToolTip : Window
     {
-        public MainWindow()
+        public TestToolTip()
         {
             InitializeComponent();
-            this.DataContext = new MainWindow();
         }
     }
 }

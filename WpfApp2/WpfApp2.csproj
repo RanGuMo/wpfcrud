@@ -70,8 +70,50 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\TestBorder.xaml.cs">
+      <DependentUpon>TestBorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TestButton.xaml.cs">
+      <DependentUpon>TestButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TestCheckBox.xaml.cs">
+      <DependentUpon>TestCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TestGroupBox.xaml.cs">
+      <DependentUpon>TestGroupBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TestRadioButton.xaml.cs">
+      <DependentUpon>TestRadioButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TestToolTip.xaml.cs">
+      <DependentUpon>TestToolTip.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Page Include="Controls\TestBorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TestButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TestCheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TestGroupBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TestRadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TestToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -102,6 +144,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
