@@ -70,6 +70,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Animatable\WindowAnimatable.xaml.cs">
+      <DependentUpon>WindowAnimatable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Binding\PageWindow.xaml.cs">
+      <DependentUpon>PageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Binding\WindowBindingSlider.xaml.cs">
+      <DependentUpon>WindowBindingSlider.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TestBorder.xaml.cs">
       <DependentUpon>TestBorder.xaml</DependentUpon>
     </Compile>
@@ -90,6 +99,18 @@
     </Compile>
     <Compile Include="Student.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Page Include="Animatable\WindowAnimatable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Binding\PageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Binding\WindowBindingSlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TestBorder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,5 +176,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
