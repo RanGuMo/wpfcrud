@@ -24,7 +24,7 @@ namespace WpfApp2
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainWindow();
+            this.DataContext = new MainViewModel();//绑定MainViewWindow
         }
     }
 }

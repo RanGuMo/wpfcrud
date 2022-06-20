@@ -6,7 +6,7 @@ using System.Windows;
 namespace WpfApp2.ViewModel
 {
 
-    public class MainViewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase   //1.¼Ì³ÐViewModelBase
     {
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
@@ -23,7 +23,6 @@ namespace WpfApp2.ViewModel
         }
 
         private string className;
-
         public string ClassName
         {
             get { return className; }
@@ -31,7 +30,6 @@ namespace WpfApp2.ViewModel
         }
 
         public ObservableCollection<Student> students;
-
         public ObservableCollection<Student> Students
         {
             get { return students; }
