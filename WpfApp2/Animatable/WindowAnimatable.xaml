@@ -32,8 +32,8 @@
         </EventTrigger>
     </Window.Triggers>
 
-    <Grid>
-
+    <Grid Name="GridMain">
+        
         <Button></Button>
         
     </Grid>

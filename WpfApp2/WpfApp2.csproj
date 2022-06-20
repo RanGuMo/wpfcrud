@@ -79,6 +79,12 @@
     <Compile Include="Binding\WindowBindingSlider.xaml.cs">
       <DependentUpon>WindowBindingSlider.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Container\WindowDockPanel.xaml.cs">
+      <DependentUpon>WindowDockPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Container\WindowWrapPanel.xaml.cs">
+      <DependentUpon>WindowWrapPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TestBorder.xaml.cs">
       <DependentUpon>TestBorder.xaml</DependentUpon>
     </Compile>
@@ -99,6 +105,9 @@
     </Compile>
     <Compile Include="Student.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="Container\WindowStackPanel.xaml.cs">
+      <DependentUpon>WindowStackPanel.xaml</DependentUpon>
+    </Compile>
     <Page Include="Animatable\WindowAnimatable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -108,6 +117,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Binding\WindowBindingSlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Container\WindowDockPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Container\WindowWrapPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,6 +164,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Container\WindowStackPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

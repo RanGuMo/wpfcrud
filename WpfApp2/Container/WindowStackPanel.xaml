@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp2.WPF布局容器.WindowStackPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.WPF布局容器"
+        mc:Ignorable="d"
+        Title="WindowStackPanel" Height="450" Width="800">
+    <Grid>
+        <!--横向布局-->
+        <StackPanel Orientation="Horizontal">
+            <Button Width="400" Height="40"/>
+            <Button Width="400" Height="40"/>
+            <Button Width="400" Height="40"/>
+        </StackPanel>
+<!--纵向布局-->
+        <StackPanel Orientation="Vertical">
+            <Button Width="400" Height="40"/>
+            <Button Width="400" Height="40"/>
+            <Button Width="400" Height="40"/>
+        </StackPanel>
+    </Grid>
+</Window>
