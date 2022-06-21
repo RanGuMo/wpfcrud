@@ -103,6 +103,9 @@
     <Compile Include="Controls\TestToolTip.xaml.cs">
       <DependentUpon>TestToolTip.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\WindowComboBox.xaml.cs">
+      <DependentUpon>WindowComboBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs" />
     <Compile Include="Template\WindowCellTemplate.xaml.cs">
       <DependentUpon>WindowCellTemplate.xaml</DependentUpon>
@@ -158,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\TestToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\WindowComboBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
