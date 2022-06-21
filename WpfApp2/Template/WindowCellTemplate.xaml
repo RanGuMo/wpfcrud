@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp2.Template.WindowCellTemplate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.Template"
+        mc:Ignorable="d"
+        Title="WindowCellTemplate" Height="450" Width="800">
+    <Grid>
+
+        <DataGrid Name="gd" AutoGenerateColumns="False" CanUserSortColumns="True"  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding UserName}" Width="100" Header="学生姓名"/>
+                <DataGridTextColumn Binding="{Binding ClassName}" Width="100" Header="班级名称"/>
+                <DataGridTextColumn Binding="{Binding Address}" Width="200" Header="地址"/>
+                <DataGridTemplateColumn Header="操作" Width="100" >
+                    <DataGridTemplateColumn.CellTemplate>    
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <Button Content="编辑"/>
+                                <Button Margin="8 0 0 0" Content="删除" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</Window>

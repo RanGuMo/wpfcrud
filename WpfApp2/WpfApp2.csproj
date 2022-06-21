@@ -104,6 +104,15 @@
       <DependentUpon>TestToolTip.xaml</DependentUpon>
     </Compile>
     <Compile Include="Student.cs" />
+    <Compile Include="Template\WindowCellTemplate.xaml.cs">
+      <DependentUpon>WindowCellTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Template\WindowItemsControl.xaml.cs">
+      <DependentUpon>WindowItemsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Template\WindowItemTemplate.xaml.cs">
+      <DependentUpon>WindowItemTemplate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="Container\WindowStackPanel.xaml.cs">
       <DependentUpon>WindowStackPanel.xaml</DependentUpon>
@@ -165,6 +174,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Container\WindowStackPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Template\WindowCellTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Template\WindowItemsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Template\WindowItemTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
