@@ -109,6 +109,9 @@
     <Compile Include="Controls\WindowComboBox.xaml.cs">
       <DependentUpon>WindowComboBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="handyControl\Shell.xaml.cs">
+      <DependentUpon>Shell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="handyControl\WindowHandyControl.xaml.cs">
       <DependentUpon>WindowHandyControl.xaml</DependentUpon>
     </Compile>
@@ -171,6 +174,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\WindowComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="handyControl\Shell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
