@@ -69,6 +69,12 @@
     </Compile>
     <Compile Include="ViewModel\ItemMenu.cs" />
     <Compile Include="ViewModel\SubItem.cs" />
+    <Compile Include="View\UserControlPrintRecord.xaml.cs">
+      <DependentUpon>UserControlPrintRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControlPrintStatistics.xaml.cs">
+      <DependentUpon>UserControlPrintStatistics.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -82,6 +88,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UseControlMenuItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControlPrintRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserControlPrintStatistics.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,5 +130,6 @@
   <ItemGroup>
     <Resource Include="Assets\logo.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

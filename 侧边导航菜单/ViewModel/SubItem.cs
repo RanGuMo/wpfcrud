@@ -12,11 +12,13 @@ namespace 侧边导航菜单.ViewModel
     {
         public string Name { get; set; }
         public UserControl Screen { get; set; }
+        
 
-        public SubItem(string name, UserControl screen=null)
+        public SubItem(string name, UserControl screen = null)
         {
             Name = name;
             Screen = screen;
         }
+       
     }
 }

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using 侧边导航菜单.View;
 using 侧边导航菜单.ViewModel;
 
 namespace 侧边导航菜单
@@ -31,8 +32,8 @@ namespace 侧边导航菜单
 
             //注册子菜单
             var menuBase = new List<SubItem>();
-            menuBase.Add(new SubItem("打印记录"));
-            menuBase.Add(new SubItem("打印统计"));
+            menuBase.Add(new SubItem("打印记录",new UserControlPrintRecord()));
+            menuBase.Add(new SubItem("打印统计",new UserControlPrintStatistics()));
             menuBase.Add(new SubItem("日志记录"));
             //注册父菜单 并 将子菜单加入进来
             var item1 = new ItemMenu("基础信息", menuBase, PackIconKind.Register);
@@ -61,14 +62,31 @@ namespace 侧边导航菜单
             //注册父菜单 并 将子菜单加入进来
             var item4 = new ItemMenu("系统管理", systemManagement, PackIconKind.Register);
 
-            Menu.Children.Add(new UseControlMenuItem(item0));
-            Menu.Children.Add(new UseControlMenuItem(item1));
-            Menu.Children.Add(new UseControlMenuItem(item2));
-            Menu.Children.Add(new UseControlMenuItem(item3));
-            Menu.Children.Add(new UseControlMenuItem(item4));
+            Menu.Children.Add(new UseControlMenuItem(item0,this));
+            Menu.Children.Add(new UseControlMenuItem(item1,this));
+            Menu.Children.Add(new UseControlMenuItem(item2,this));
+            Menu.Children.Add(new UseControlMenuItem(item3,this));
+            Menu.Children.Add(new UseControlMenuItem(item4,this));
 
 
 
         }
+
+        /// <summary>
+        /// 切换导航
+        /// </summary>
+        /// <param name="sender"></param>
+        internal void SwitchScreen(object sender)
+        {
+            var screen = ((UserControl)sender);
+
+            if (screen != null)
+            {
+                StackPanelMain.Children.Clear();
+                StackPanelMain.Children.Add(screen);
+            }
+        }
+
+
     }
 }

@@ -61,7 +61,8 @@
             </hc:ScrollViewer>
 
         </Grid>
-
+       <!--主显示页面-->
+        <StackPanel x:Name="StackPanelMain" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"></StackPanel>
 
     </Grid>
 </Window>
