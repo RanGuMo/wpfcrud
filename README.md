@@ -1,2 +1,3 @@
 # wpfcrud
-wpf的crud 及导航菜单
+wpfApp3的crud 
+WPFAPP2 的导航菜单
